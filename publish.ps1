@@ -1,0 +1,1 @@
+& pod trunk push CloudmersiveVirusApiClient.podspec --allow-warnings

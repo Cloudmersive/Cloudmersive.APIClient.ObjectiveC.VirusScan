@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/Cloudmersive/Cloudmersive.APIClient.ObjectiveC.VirusScan.git", :tag => "#{s.version}" }
     s.author       = { "Cloudmersive" => "support@cloudmersive.com" }
 
-    s.source_files = 'CloudmersiveVirusApiClient/**/*.{m,h}'
-    s.public_header_files = 'CloudmersiveVirusApiClient/**/*.h'
+    s.source_files = 'client/CloudmersiveVirusApiClient/**/*.{m,h}'
+    s.public_header_files = 'client/CloudmersiveVirusApiClient/**/*.h'
 
 
     s.dependency 'AFNetworking', '~> 3'

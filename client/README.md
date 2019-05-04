@@ -43,6 +43,8 @@ Import the following:
 // load models
 #import <CloudmersiveVirusApiClient/CMVirusFound.h>
 #import <CloudmersiveVirusApiClient/CMVirusScanResult.h>
+#import <CloudmersiveVirusApiClient/CMWebsiteScanRequest.h>
+#import <CloudmersiveVirusApiClient/CMWebsiteScanResult.h>
 // load API classes for accessing endpoints
 #import <CloudmersiveVirusApiClient/CMScanApi.h>
 
@@ -90,12 +92,15 @@ All URIs are relative to *https://api.cloudmersive.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CMScanApi* | [**scanFile**](docs/CMScanApi.md#scanfile) | **POST** /virus/scan/file | Scan a file for viruses
+*CMScanApi* | [**scanWebsite**](docs/CMScanApi.md#scanwebsite) | **POST** /virus/scan/website | Scan a website for malicious content including viruses and threats (including Phishing)
 
 
 ## Documentation For Models
 
  - [CMVirusFound](docs/CMVirusFound.md)
  - [CMVirusScanResult](docs/CMVirusScanResult.md)
+ - [CMWebsiteScanRequest](docs/CMWebsiteScanRequest.md)
+ - [CMWebsiteScanResult](docs/CMWebsiteScanResult.md)
 
 
 ## Documentation For Authorization

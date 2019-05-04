@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "CMVirusScanResult.h"
+#import "CMWebsiteScanRequest.h"
+#import "CMWebsiteScanResult.h"
 #import "CMApi.h"
 
 /**
@@ -33,6 +35,18 @@ extern NSInteger kCMScanApiMissingParamErrorCode;
 /// @return CMVirusScanResult*
 -(NSURLSessionTask*) scanFileWithInputFile: (NSURL*) inputFile
     completionHandler: (void (^)(CMVirusScanResult* output, NSError* error)) handler;
+
+
+/// Scan a website for malicious content including viruses and threats (including Phishing)
+/// 
+///
+/// @param input 
+/// 
+///  code:200 message:"OK"
+///
+/// @return CMWebsiteScanResult*
+-(NSURLSessionTask*) scanWebsiteWithInput: (CMWebsiteScanRequest*) input
+    completionHandler: (void (^)(CMWebsiteScanResult* output, NSError* error)) handler;
 
 
 

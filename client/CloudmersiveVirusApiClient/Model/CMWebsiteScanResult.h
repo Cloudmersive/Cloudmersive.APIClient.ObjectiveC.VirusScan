@@ -3,7 +3,7 @@
 
 /**
 * virusapi
-* Virus API lets you scan files and content for viruses and identify security issues with content.
+* The Cloudmersive Virus Scan API lets you scan files and content for viruses and identify security issues with content.
 *
 * OpenAPI spec version: v1
 * 
@@ -14,6 +14,9 @@
 */
 
 
+#import "CMVirusFound.h"
+@protocol CMVirusFound;
+@class CMVirusFound;
 
 
 
@@ -28,5 +31,11 @@
 /* Type of threat returned; can be None, Malware, ForcedDownload or Phishing [optional]
  */
 @property(nonatomic) NSString* websiteThreatType;
+/* Array of viruses found, if any [optional]
+ */
+@property(nonatomic) NSArray<CMVirusFound>* foundViruses;
+/* The remote server URL HTTP reasponse code; useful for debugging issues with scanning; typically if the remote server returns a 200 or 300-series code this means a successful response, while a 400 or 500 series code would represent an error returned from the remote server for the provided URL. [optional]
+ */
+@property(nonatomic) NSNumber* websiteHttpResponseCode;
 
 @end

@@ -4,7 +4,7 @@
 
 /**
 * virusapi
-* Virus API lets you scan files and content for viruses and identify security issues with content.
+* The Cloudmersive Virus Scan API lets you scan files and content for viruses and identify security issues with content.
 *
 * OpenAPI spec version: v1
 * 
@@ -15,7 +15,7 @@
 */
 
 
-static NSString * const kCMAPIVersion = @"1.1.4";
+static NSString * const kCMAPIVersion = @"1.1.6";
 
 @protocol CMConfiguration <NSObject>
 

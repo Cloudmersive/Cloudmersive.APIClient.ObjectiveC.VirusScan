@@ -9,11 +9,11 @@
 
 Pod::Spec.new do |s|
     s.name             = "CloudmersiveVirusApiClient"
-    s.version          = "1.1.4"
+    s.version          = "1.1.6"
 
     s.summary          = "virusapi"
     s.description      = <<-DESC
-                         Virus API lets you scan files and content for viruses and identify security issues with content.
+                         The Cloudmersive Virus Scan API lets you scan files and content for viruses and identify security issues with content.
                          DESC
 
     s.platform     = :ios, '7.0'

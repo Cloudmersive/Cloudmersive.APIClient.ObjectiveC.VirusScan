@@ -127,7 +127,9 @@ NSInteger kCMScanApiMissingParamErrorCode = 234513;
 ///
 ///  @param allowInvalidFiles Set to false to block invalid files, such as a PDF file that is not really a valid PDF file, or a Word Document that is not a valid Word Document.  Default is false (recommended). (optional)
 ///
-///  @param allowScripts Set to false to block script files, such as a PHP files, Pythong scripts, and other malicious content or security threats that can be embedded in the file.  Set to true to allow these file types.  Default is false (recommended). (optional)
+///  @param allowScripts Set to false to block script files, such as a PHP files, Python scripts, and other malicious content or security threats that can be embedded in the file.  Set to true to allow these file types.  Default is false (recommended). (optional)
+///
+///  @param allowPasswordProtectedFiles Set to false to block password protected and encrypted files, such as encrypted zip and rar files, and other files that seek to circumvent scanning through passwords.  Set to true to allow these file types.  Default is false (recommended). (optional)
 ///
 ///  @param restrictFileTypes Specify a restricted set of file formats to allow as clean as a comma-separated list of file formats, such as .pdf,.docx,.png would allow only PDF, PNG and Word document files.  All files must pass content verification against this list of file formats, if they do not, then the result will be returned as CleanResult=false.  Set restrictFileTypes parameter to null or empty string to disable; default is disabled. (optional)
 ///
@@ -137,6 +139,7 @@ NSInteger kCMScanApiMissingParamErrorCode = 234513;
     allowExecutables: (NSNumber*) allowExecutables
     allowInvalidFiles: (NSNumber*) allowInvalidFiles
     allowScripts: (NSNumber*) allowScripts
+    allowPasswordProtectedFiles: (NSNumber*) allowPasswordProtectedFiles
     restrictFileTypes: (NSString*) restrictFileTypes
     completionHandler: (void (^)(CMVirusScanAdvancedResult* output, NSError* error)) handler {
     // verify the required parameter 'inputFile' is set
@@ -165,6 +168,9 @@ NSInteger kCMScanApiMissingParamErrorCode = 234513;
     }
     if (allowScripts != nil) {
         headerParams[@"allowScripts"] = allowScripts;
+    }
+    if (allowPasswordProtectedFiles != nil) {
+        headerParams[@"allowPasswordProtectedFiles"] = allowPasswordProtectedFiles;
     }
     if (restrictFileTypes != nil) {
         headerParams[@"restrictFileTypes"] = restrictFileTypes;

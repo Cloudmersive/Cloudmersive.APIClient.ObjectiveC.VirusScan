@@ -37,6 +37,9 @@
 /* True if the scan contained a script (such as a PHP script, Python script, etc.) which can be a significant risk factor [optional]
  */
 @property(nonatomic) NSNumber* containsScript;
+/* True if the scan contained a password protected or encrypted file, which can be a significant risk factor [optional]
+ */
+@property(nonatomic) NSNumber* containsPasswordProtectedFile;
 /* True if the uploaded file is of a type that is not allowed based on the optional restrictFileTypes parameter, false otherwise; if restrictFileTypes is not set, this will always be false [optional]
  */
 @property(nonatomic) NSNumber* containsRestrictedFileFormat;

@@ -41,6 +41,8 @@ Import the following:
 #import <CloudmersiveVirusApiClient/CMApiClient.h>
 #import <CloudmersiveVirusApiClient/CMDefaultConfiguration.h>
 // load models
+#import <CloudmersiveVirusApiClient/CMCloudStorageVirusFound.h>
+#import <CloudmersiveVirusApiClient/CMCloudStorageVirusScanResult.h>
 #import <CloudmersiveVirusApiClient/CMVirusFound.h>
 #import <CloudmersiveVirusApiClient/CMVirusScanAdvancedResult.h>
 #import <CloudmersiveVirusApiClient/CMVirusScanResult.h>
@@ -48,6 +50,7 @@ Import the following:
 #import <CloudmersiveVirusApiClient/CMWebsiteScanResult.h>
 // load API classes for accessing endpoints
 #import <CloudmersiveVirusApiClient/CMScanApi.h>
+#import <CloudmersiveVirusApiClient/CMScanCloudStorageApi.h>
 
 ```
 
@@ -95,10 +98,15 @@ Class | Method | HTTP request | Description
 *CMScanApi* | [**scanFile**](docs/CMScanApi.md#scanfile) | **POST** /virus/scan/file | Scan a file for viruses
 *CMScanApi* | [**scanFileAdvanced**](docs/CMScanApi.md#scanfileadvanced) | **POST** /virus/scan/file/advanced | Advanced Scan a file for viruses
 *CMScanApi* | [**scanWebsite**](docs/CMScanApi.md#scanwebsite) | **POST** /virus/scan/website | Scan a website for malicious content and threats
+*CMScanCloudStorageApi* | [**scanCloudStorageScanAwsS3File**](docs/CMScanCloudStorageApi.md#scancloudstoragescanawss3file) | **POST** /virus/scan/cloud-storage/aws-s3/single | Scan an AWS S3 file for viruses
+*CMScanCloudStorageApi* | [**scanCloudStorageScanAzureBlob**](docs/CMScanCloudStorageApi.md#scancloudstoragescanazureblob) | **POST** /virus/scan/cloud-storage/azure-blob/single | Scan an Azure Blob for viruses
+*CMScanCloudStorageApi* | [**scanCloudStorageScanGcpStorageFile**](docs/CMScanCloudStorageApi.md#scancloudstoragescangcpstoragefile) | **POST** /virus/scan/cloud-storage/gcp-storage/single | Scan an Google Cloud Platform (GCP) Storage file for viruses
 
 
 ## Documentation For Models
 
+ - [CMCloudStorageVirusFound](docs/CMCloudStorageVirusFound.md)
+ - [CMCloudStorageVirusScanResult](docs/CMCloudStorageVirusScanResult.md)
  - [CMVirusFound](docs/CMVirusFound.md)
  - [CMVirusScanAdvancedResult](docs/CMVirusScanAdvancedResult.md)
  - [CMVirusScanResult](docs/CMVirusScanResult.md)

@@ -2,7 +2,7 @@
 
   "podName" : "CloudmersiveVirusApiClient",
   "classPrefix" : "CM",
-  "podVersion" : "1.1.6",
+  "podVersion" : "1.1.7",
   "authorName" : "Cloudmersive",
   "authorEmail" : "support@cloudmersive.com",
   "gitRepoURL" : "https://github.com/Cloudmersive/Cloudmersive.APIClient.ObjectiveC.VirusScan"

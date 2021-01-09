@@ -17,7 +17,7 @@
  * This method is used by `JSONModel`.
  */
 + (JSONKeyMapper *)keyMapper {
-  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"cleanResult": @"CleanResult", @"containsExecutable": @"ContainsExecutable", @"containsInvalidFile": @"ContainsInvalidFile", @"containsScript": @"ContainsScript", @"containsRestrictedFileFormat": @"ContainsRestrictedFileFormat", @"verifiedFileFormat": @"VerifiedFileFormat", @"foundViruses": @"FoundViruses" }];
+  return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{ @"cleanResult": @"CleanResult", @"containsExecutable": @"ContainsExecutable", @"containsInvalidFile": @"ContainsInvalidFile", @"containsScript": @"ContainsScript", @"containsPasswordProtectedFile": @"ContainsPasswordProtectedFile", @"containsRestrictedFileFormat": @"ContainsRestrictedFileFormat", @"verifiedFileFormat": @"VerifiedFileFormat", @"foundViruses": @"FoundViruses" }];
 }
 
 /**
@@ -27,7 +27,7 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"cleanResult", @"containsExecutable", @"containsInvalidFile", @"containsScript", @"containsRestrictedFileFormat", @"verifiedFileFormat", @"foundViruses"];
+  NSArray *optionalProperties = @[@"cleanResult", @"containsExecutable", @"containsInvalidFile", @"containsScript", @"containsPasswordProtectedFile", @"containsRestrictedFileFormat", @"verifiedFileFormat", @"foundViruses"];
   return [optionalProperties containsObject:propertyName];
 }
 
